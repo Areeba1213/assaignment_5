@@ -2,7 +2,9 @@ import streamlit as st
 import hashlib
 import json
 import os
-from cryptography.fernet import Fernet, InvalidToken
+from cryptography.fernet import Fernet
+key = Fernet.generate_key()
+print(key)
 
 # File paths
 DATA_FILE = "data.json"
